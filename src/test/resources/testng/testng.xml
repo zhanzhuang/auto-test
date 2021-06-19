@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="fsk testng">
+    <test name="fskModule">
+        <classes name="com.example.autotest.controller.*">
+            <class name="com.example.autotest.controller.UserControllerTest"/>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.example.autotest.config.ExtentTestNGIReporterListener"/>
+    </listeners>
+</suite>
