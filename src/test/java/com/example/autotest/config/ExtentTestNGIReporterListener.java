@@ -41,10 +41,7 @@ public class ExtentTestNGIReporterListener implements IReporter {
             if (createSuiteNode) {
                 suiteTest = extent.createTest(suite.getName()).assignCategory(suite.getName());
             }
-            boolean createSuiteResultNode = false;
-            if (result.size() > 1) {
-                createSuiteResultNode = true;
-            }
+            boolean createSuiteResultNode = result.size() > 1;
             for (ISuiteResult r : result.values()) {
                 ExtentTest resultNode;
                 ITestContext context = r.getTestContext();
