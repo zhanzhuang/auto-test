@@ -1,0 +1,1 @@
+java -jar ./lib/moco-runner-1.2.0-standalone.jar http -p 8888 -c startup.json
