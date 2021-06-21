@@ -9,4 +9,8 @@ public class MethodUtilTest {
         String str = MethodUtil.reverse("abc");
         Assert.assertEquals(str, "cba");
     }
+    @Test
+    public void willFailure() {
+        int i = 1/0;
+    }
 }
