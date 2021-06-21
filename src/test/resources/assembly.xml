@@ -18,6 +18,7 @@
     <fileSets>
         <fileSet>
             <directory>${project.build.directory}/test-classes</directory>
+            <directory>${project.build.directory}/classes</directory>
             <outputDirectory>/</outputDirectory>
             <includes>
                 <include>**/*.class</include>
