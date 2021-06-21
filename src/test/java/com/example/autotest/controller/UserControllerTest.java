@@ -17,7 +17,7 @@ public class UserControllerTest {
     @Test
     public void getUserTest() throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpGet httpGet = new HttpGet("http://localhost:8080/user");
+        HttpGet httpGet = new HttpGet("http://localhost:8090/user");
         CloseableHttpResponse response = httpClient.execute(httpGet);
         StatusLine statusLine = response.getStatusLine();
 
