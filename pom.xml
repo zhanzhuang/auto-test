@@ -15,7 +15,8 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
-<!--        <skipTests>true</skipTests>-->
+        <!--    打包会打进去，只是在打包的时候不执行test case    -->
+        <skipTests>true</skipTests>
     </properties>
     <dependencies>
         <dependency>
