@@ -8,7 +8,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.Asserts;
 import org.apache.http.util.EntityUtils;
-import org.springframework.util.Assert;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -26,6 +26,7 @@ public class UserControllerTest {
         System.out.println("content:" + content);
         EntityUtils.consume(response.getEntity());
         response.close();
-        Assert.notNull(content);
+        Assert.assertNotNull(content);
     }
+
 }

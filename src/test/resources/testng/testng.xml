@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <suite name="fsk testng">
     <test name="fskModule">
-        <classes name="com.example.autotest.controller.*">
+        <classes name="com.example.autotest.*">
             <class name="com.example.autotest.controller.UserControllerTest"/>
+            <class name="com.example.autotest.util.MethodUtilTest"/>
         </classes>
     </test>
     <listeners>
