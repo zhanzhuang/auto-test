@@ -10,7 +10,7 @@ import java.util.List;
 @SpringBootTest
 class AutoTestApplicationTests {
     public static void main(String[] args) {
-        String testngXmlPath = System.getProperty("user.dir") + "/target/test-classes/testng/testng.xml";
+        String testngXmlPath = System.getProperty("user.dir") + "/test-classes/testng/testng.xml";
         System.out.println("testngXmlPath:" + testngXmlPath);
         TestNG testNG = new TestNG();
         List<String> suites = Lists.newArrayList();
