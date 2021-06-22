@@ -1,3 +1,3 @@
 # auto-test
 
-# 结合HttpClient+testNG+Jenkins实现自动化测试
+httpClient + testNG + jenkins 实现自动化测试生成报告
