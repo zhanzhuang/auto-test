@@ -15,6 +15,9 @@ import org.testng.xml.XmlSuite;
 import java.io.File;
 import java.util.*;
 
+/**
+ * 自动生成测试报告config
+ */
 public class ExtentTestNGIReporterListener implements IReporter {
 
     private static final String OUTPUT_FOLDER = "test-output/";

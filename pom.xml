@@ -6,7 +6,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.5.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>com.example</groupId>
     <artifactId>auto-test</artifactId>
@@ -35,12 +35,12 @@
             <scope>compile</scope>
         </dependency>
 
+        <!--    testng + httpclient + 生成测试报告所需依赖    -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.13</version>
         </dependency>
-
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -66,13 +66,14 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+        <!--    testng + httpclient + 生成测试报告所需依赖    -->
+        <!--    将test打成jar包所需依赖    -->
         <dependency>
             <groupId>com.beust</groupId>
             <artifactId>jcommander</artifactId>
             <version>1.81</version>
         </dependency>
-
+        <!--    将test打成jar包所需依赖    -->
 
     </dependencies>
 
@@ -83,6 +84,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.5.1</version>
             </plugin>
+            <!--      将test目录打包配置      -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -107,6 +109,7 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--      将test目录打包配置      -->
         </plugins>
     </build>
 
