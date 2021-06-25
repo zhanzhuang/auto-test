@@ -49,3 +49,8 @@ echo '>>>>>>>>>>>>>>>>>>>>stop execute shell'
 + 3.常见问题
     + 3.1 git拉取github代码速度比较慢,使用镜像访问,配置机器hosts文件
 ![img_10.png](images/img_10.png)
+      ```shell
+      # 国内访问github速度慢
+      140.82.114.4 github.com
+      199.232.69.194 github.global.ssl.fastly.net
+      ```
