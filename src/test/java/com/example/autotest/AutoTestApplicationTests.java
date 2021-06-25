@@ -19,15 +19,4 @@ class AutoTestApplicationTests {
         testNG.run();
     }
 
-//    @Test
-//    void contextLoads() {
-//        String testngXmlPath = System.getProperty("user.dir") + "/target/test-classes/testng/testng.xml";
-//        System.out.println("testngXmlPath:" + testngXmlPath);
-//        TestNG testNG = new TestNG();
-//        List<String> suites = Lists.newArrayList();
-//        suites.add(testngXmlPath);
-//        testNG.setTestSuites(suites);
-//        testNG.run();
-//    }
-
 }

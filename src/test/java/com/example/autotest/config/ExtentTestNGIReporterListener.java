@@ -17,7 +17,7 @@ import java.util.*;
 
 public class ExtentTestNGIReporterListener implements IReporter {
 
-    private static final String OUTPUT_FOLDER = "testng-output/";
+    private static final String OUTPUT_FOLDER = "test-output/";
     private static final String FILE_NAME = "福寿康管理系统自动化测试报告.html";
 
     private ExtentReports extent;
