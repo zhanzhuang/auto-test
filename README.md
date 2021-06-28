@@ -3,6 +3,10 @@
 + **[介绍](#介绍)**
 + **[项目结构](#项目结构)**
 + **[POM依赖](#POM依赖)**
++ **[启动](#启动)**
++ **[本地启动](#本地启动)**
++ **[结合Jenkins使用](#结合Jenkins使用)**
++ **[常见问题](#常见问题)**
 
 ## 介绍
 ### 项目结构
@@ -128,8 +132,8 @@
 </project>
 
 ```
-## 2.启动
-### 2.1本地启动
+## 启动
+### 本地启动
 + 1.IDEA插件或者其他方式执行`maven package`,会在`auto-test`目录下面生成`target`目录。因为我们在POM文件中增加了将test打包的配置,`target`目录下会多出来一个`auto-test-0.0.1-SNAPSHOT-TEST.jar`
   
 + 2.命令行执行`java -jar auto-test-0.0.1-SNAPSHOT.jar`或者其他方式启动`auto-test-0.0.1-SNAPSHOT.jar`.有一些test case,例如接口测试需要接口已经启动,所以在执行测试案例之前确保 `auto-test-0.0.1-SNAPSHOT.jar`在运行状态
@@ -138,9 +142,11 @@
     
 + 4.在工作空间下会生成测试报告`auto-test/target/test-output/福寿康管理系统自动化测试报告.html`
 
-### 2.2结合Jenkins使用
-+ 1.安装Jenkins略过
-+ 2.配置Jenkins
+### 结合Jenkins使用
++ Jenkins在这里做的事情
+  - 去github上面拉代码，然后进行打包,打完包启动jar包
++ 安装Jenkins略过
++ 配置Jenkins
 
 登录Jenkins后新建一个任务,如下所示
 ![img.png](images/img.png)
@@ -149,6 +155,9 @@
 ![img_1.png](images/img_1.png)
 
 源码管理处选择Git,Respository URL填写GIT地址(这里我用的是github).在下方添加一个证书,如下所示
+```shell
+在添加证书前,应该先在jenkins所在的机器上面生成ssh key,并且在github上面配置好
+```
 ![img_2.png](images/img_2.png)
 
 在弹出的证书配置界面添加github账号和密码后点击确定,如下所示
@@ -195,14 +204,17 @@ echo '>>>>>>>>>>>>>>>>>>>>stop execute shell'
 
 构建成功后Job的第一栏会有一个绿色的对号.如果构建失败,可以点进去Job的名称,在Build History处找到失败的构建记录,如下图所示
 ![img_3.png](images/img15.png)
+
 点击失败的构建记录,有控制台输出选项,点击控制台输出选项即可看到构建日志,如下图所示
 ![img_7.png](images/img_7.png)
 
-+ 3.常见问题
-    + 3.1 Jenkins配置的git拉取github代码速度比较慢,使用镜像访问,配置宿主机器hosts文件,如下图所示
+## 常见问题
+Jenkins配置的git拉取github代码速度比较慢,使用镜像访问,配置宿主机器hosts文件,如下图所示
 ![img_10.png](images/img_10.png)
-      ```shell
-      # 国内访问github速度慢
-      140.82.114.4 github.com
-      199.232.69.194 github.global.ssl.fastly.net
-      ```
+```shell
+# 使用镜像访问github
+140.82.114.4 github.com
+199.232.69.194 github.global.ssl.fastly.net
+  ```
+
+## 可优化的地方
