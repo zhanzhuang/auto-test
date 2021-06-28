@@ -1,13 +1,13 @@
 # httpClient + testNG + jenkins 实现自动化测试及报告的生成
 ## 目录
-+ **[1.介绍](#1.介绍)**
-+ **[1.1项目结构](#1.1项目结构)**
-+ **[1.2POM依赖](#1.2POM依赖)**
++ **[介绍](#介绍)**
++ **[项目结构](#项目结构)**
++ **[POM依赖](#POM依赖)**
 
-## 1.介绍
-### 1.1项目结构
+## 介绍
+### 项目结构
 ![img.png](images/img11.png)
-### 1.2POM依赖
+### POM依赖
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
