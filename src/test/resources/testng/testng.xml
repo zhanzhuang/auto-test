@@ -2,11 +2,13 @@
 <suite name="fsk testng">
     <test name="fskModule">
         <classes name="com.example.autotest.*">
+            <!--      新建测试类要在如下位置配置才可以在AutoTestApplicationTests.java入口方法执行      -->
             <class name="com.example.autotest.controller.UserControllerTest"/>
             <class name="com.example.autotest.util.MethodUtilTest"/>
         </classes>
     </test>
     <listeners>
+        <!--    导出测试报告配置    -->
         <listener class-name="com.example.autotest.config.ExtentTestNGIReporterListener"/>
     </listeners>
 </suite>
